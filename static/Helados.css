@@ -1,0 +1,35 @@
+
+
+.row p{
+
+    text-align: center;
+}
+
+.row h3{
+    font-weight: bold;
+    text-align: center;
+}
+
+#item{
+    display: flex;
+}
+
+#desple{
+    list-style: none;
+    display: none;
+}
+
+#desple li a:hover{
+    background: pink;
+}
+
+#desple li a{
+    color:black ;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+#item:hover #desple{
+    display: block;
+    margin:0;
+}

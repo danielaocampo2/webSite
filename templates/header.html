@@ -1,0 +1,122 @@
+{% comment %} Esta es la clase base de esta heredan las demas {% endcomment %}
+
+{% load static  %}  
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'eHeader.css' %}" media="screen" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulce Capricho</title>
+</head>
+<body>
+    <header class="header">
+        <div class="flex-container">
+            <div><img src="{% static 'Imagenes/logo.gif' %}" width="150" height="150"></div>
+            <nav class="navigation" >
+                <ul>                   
+                    <li><a href="{% url 'Clientes:inicio' %}">HOME</a></li> 
+                    <li><a href="{% url 'Clientes:promo' %}">PROMOCIONES</a></li>
+                    <li><a href="{% url 'Clientes:Chelados' %}">DOMICILIOS</a></li>
+                    <!---
+                        Otra manera de llamar los url de las aplicaciones, sólo se coloca el nombre
+                        de la aplicacion, : y el nombre de la dirección.
+                    -->
+                    <li><a href="{% url 'Clientes:sign_up' %}">REGÍSTRATE</a></li>
+                    <li><a href="{% url 'Clientes:mensaje' %}">CONTÁCTANOS</a></li>
+                    <li><a href="{% url 'Clientes:cart' %}"><img src="{% static 'Imagenes/carrito.gif' %}"width="40" height="40"> <span class="badge">{{ request.session.items_total}}</a></li> <!--numero de elementos en el carrito-->
+                    <li><a href="https://www.facebook.com/Dulcecaprichoheladosymalteadas" ><img src="{% static 'Imagenes/face.png' %}"width="40" height="40"></a></li>
+                </ul>          
+            </nav>
+        </div>
+    </header>
+    <!---
+        Imagen que aparece al lado derecho. Se despliega el nombre y la opción de salir.
+    -->
+    <div id="perfil" class="perfil" style="float: right;" >
+        <img src="{% static 'Imagenes/perfil.png' %}" style=" width:100px; height:50px;">
+        <ul id="contenido">
+            <li >{{user.username}}</li>
+            <li ><a style="font-size: 16px" class="salir" href="{% url 'Clientes:sign_out' %}">Salir</a></li>
+        </ul>
+    </div>
+   
+
+ {% block content %}
+{% comment %} acá va el contenido que va a cambiar en las otras plantillas {% endcomment %}
+<!--
+    Galería de imágenes que se muestra cuando el usuario haga login o se cree un usuario 
+    llenando el formulario.
+-->   
+<div class="contenido">
+        
+        <div class="galeria">
+            <h1>Bienvenido {{user.first_name | title}}  {{user.last_name | title}} a Dulce Capricho</h1>
+            <div class="linea"></div> 
+            <div class="contenedor-imagenes">
+                <div class="imagen">
+                    <img src="{% static 'Imagenes/helado1.jpg' %}">
+                    <div class="overlay">
+                        <h2>Dulce Capricho</h2>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src="{% static 'Imagenes/helado2.jpg' %}">
+                    <div class="overlay">
+                        <h2>Dulce Capricho</h2>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src="{% static 'Imagenes/helado3.jpg' %}">
+                    <div class="overlay">
+                        <h2>Dulce Capricho</h2>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src="{% static 'Imagenes/helado4.jpg' %}">
+                    <div class="overlay">
+                        <h2>Dulce Capricho</h2>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src="{% static 'Imagenes/helado5.jpg' %}">
+                    <div class="overlay">
+                        <h2>Dulce Capricho</h2>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src="{% static 'Imagenes/helado6.jpg' %}">
+                    <div class="overlay">
+                        <h2>Dulce Capricho</h2>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src="{% static 'Imagenes/helado7.jpg' %}">
+                    <div class="overlay">
+                        <h2>Dulce Capricho</h2>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src="{% static 'Imagenes/helado8.jpg' %}">
+                    <div class="overlay">
+                        <h2>Dulce Capricho</h2>
+                    </div>
+                </div>
+                <div class="imagen">
+                    <img src="{% static 'Imagenes/helado9.jpg' %}">
+                    <div class="overlay">
+                        <h2>Dulce Capricho</h2>
+                    </div>
+                </div>
+            </div>
+            <h1>Disfruta de nuestros productos. El helado te hace feliz</h1>
+        </div>
+       
+    </div>
+{% endblock %}
+
+ {% include "footer.html"%}
+</body>
+
+</html>

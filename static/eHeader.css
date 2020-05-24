@@ -1,0 +1,189 @@
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    background-color: turquoise;
+    align-items: center; 
+    justify-content: flex-start; 
+    
+  
+    
+  }
+
+  .footer{
+    background-color: pink;
+    text-align: center;
+    height: 128px;
+    line-height:8px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+  
+  
+  .navigation ul{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+  
+  }
+  
+  .navigation ul li{
+      display: inline-block;
+  }
+  .navigation ul li a{
+      display: block;
+      padding: 0.5rem 1rem;
+      transition: all 0.4s linear;
+      border-radius: 5px;
+      font-size: 20px;
+      text-decoration: none;
+      font-family:"Homer Simpson UI";
+
+      
+  }
+  
+  .navigation ul li a:hover{
+      background: pink;
+  }
+  .header a{
+      color:black ;
+      text-decoration: none;
+  }
+  .perfil{
+    background-position: right;
+}
+
+#contenido{
+    list-style: none;
+    display: none;
+
+}
+
+#contenido li a:hover{
+    background: pink;
+}
+
+#contenido li a{
+    color:black ;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+#perfil:hover #contenido{
+    display: block;
+    margin:0;
+    transition: all 0.4s linear;
+
+}
+.perfil{
+    background-position: right;
+}
+
+#contenido{
+    list-style: none;
+    display: none;
+
+}
+#contenido li a:hover{
+    background: pink;
+}
+
+#contenido li a{
+    color:black ;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+#perfil:hover #contenido{
+    display: block;
+    margin:0;
+    transition: all 0.4s linear;
+
+}
+.galeria{
+    font-size: 'ope sans';
+}
+.galeria h1{
+    text-align: center;
+    margin: 20px 0 15px 0;
+    font-weight: 300;
+}
+.liena{
+    border-top: 5px solid turquoise;
+    margin-bottom: 40px;
+}
+.contenedor-imagenes{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 3px;
+}
+.contenedor-imagenes .imagen{
+width: 32%;
+position: relative;
+height: 450px;
+margin-bottom: 5px;
+box-shadow: 0px 0px 3px 0px rgb(0,0,0,75);
+
+}
+.imagen img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.overlay{
+position: absolute;
+bottom: 0;
+left: 0;
+background: rgb(224, 162, 183);
+width: 100%;
+height: 0;
+transition: 1s;
+overflow: hidden;
+
+}
+.overlay h2{
+color: #fff;
+font-weight: 300;
+font-size: 30px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+.imagen:hover .overlay{
+height: 100%;
+cursor: pointer;
+}
+@media screen and (max-width: 1000px){
+.contenedor-imagenes{
+width: 95%;
+}
+}
+@media screen and (max-width: 700px){
+.contenedor-imagenes{
+width:90%;
+}
+.contenedor-imagenes .imagen{
+width:40%;
+}
+}
+@media screen and (max-width: 450px){
+h1{
+font-size: 22px;
+}
+.contenedor-imagenes{
+width:90%;
+}
+.contenedor-imagenes .imagen{
+width:80%;
+}
+}
+
+

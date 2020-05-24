@@ -1,0 +1,37 @@
+{% extends "header.html" %}
+{% load static  %}
+{% block content %}
+
+<link href="https://uniwebsidad.com/static/libros/ejemplos/bootstrap-3/css/bootstrap.min.css" rel="stylesheet">
+<link href=".https://uniwebsidad.com/static/libros/ejemplos/bootstrap-3/css/main.css">
+<link rel="stylesheet" type="text/css" href="{% static 'Helados.css' %}" media="screen" />  
+    <br>  
+   <div > 
+    <li id="item">
+        <button><img src="{% static 'Imagenes/menu.jpg' %}" width="50" height="50"></button>
+        <ul id="desple">
+            <li class="menuhelados"><a href="{% url 'Clientes:Chelados' %}">Copas de helado</a></li>
+            <li class="menuhelados"><a href="{% url 'Clientes:single_ho' %}">Waffles y ensalada de frutas</a></li>
+            <li class="menuhelados"><a href="{% url 'Clientes:malteadas' %}">Malteadas</a></li>
+        </ul>
+   </li>
+  </div>
+    <div class='row' style="position:relative; margin: 40px 0 0 120px;">
+
+    {% for producto in Productos %} 
+        <div class='col-sm-4'>
+            <img class='img-responsive' src="{{MEDIA_URL}}{{ producto.image }}"/>
+            <h3>{{ producto.nombre}}</h3><br>
+            <p>Precio: {{producto.precio}} </p>
+            <p>{{producto.descripcion}} </p>
+            <form  method='GET' action='/cart/{{ producto.slug}}'>
+                <input name='qty' type='number' min="0" value='1' />
+                <input type='submit' class="btn btn-primary"  value='Agregar a carrito'/>
+            </form>
+            <br>
+        </div>
+
+    {%endfor%} 
+    </div>
+    <br>
+{%endblock%}

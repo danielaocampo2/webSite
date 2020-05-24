@@ -1,0 +1,8 @@
+{
+<<<<<<< HEAD
+    "python.pythonPath": "/usr/bin/python3",
+    "git.ignoreLimitWarning": true
+=======
+    "python.pythonPath": "bin\\Scripts\\python.exe"
+>>>>>>> 0a4084f316036f2189452fa1af88dad9793e5c3e
+}

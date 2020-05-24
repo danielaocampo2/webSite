@@ -1,0 +1,28 @@
+{% extends "header.html" %}
+{% load static  %}
+
+{% block content %}
+<link href="https://uniwebsidad.com/static/libros/ejemplos/bootstrap-3/css/bootstrap.min.css" rel="stylesheet">
+<link href=".https://uniwebsidad.com/static/libros/ejemplos/bootstrap-3/css/main.css">
+<link rel="stylesheet" type="text/css" href="{% static 'Helados.css' %}" media="screen" /> 
+<link rel="stylesheet" href="{% static 'eMensaje.css' %}">
+<form action="" method="POST" id="form">
+    <div class="form">
+        <h1>Contacto</h1>
+        <div class="grupo">
+            <input type="text" name="asunto" id="name" required><samp class="barra"></samp>
+            <label for="">Asunto</label>
+        </div>
+        <div class="grupo">
+            <input type="email" name="email" id="email" required><samp class="barra"></samp>
+            <label for="">Email</label>
+        </div>
+        <div class="grupo">
+            <input type="text" name="mensaje" id="Mensaje" style="height: 200px;" required><samp class="barra"></samp>
+            <label for="">Mensaje</label>
+        </div>
+       <button type="submit" >Enviar</button> 
+        <p class="warnings" id="warnings"></p>
+    </div>
+</form>
+{% endblock %}

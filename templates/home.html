@@ -1,0 +1,30 @@
+{% extends "header.html" %}
+{% load static  %}
+
+{% block content %}
+     <link rel="stylesheet" type="text/css" href="{% static 'eHome.css' %}" media="screen" />
+     <main>
+        <br></br>
+        <div> {% include "carrusel.html"%} <div>
+        <div class="container">
+            <h3 class="centrar"> Siempre es un buen momento para disfrutar de un delicioso helado</h3>
+            <h3> Misión</h3>
+            <p class="parrafo"> Dulce capricho pretende ser un lugar para compartir de un momento agradable con amigos,
+                familiares o grupo de trabajo; brindándoles carta con más de 50 productos donde encontrán 
+                variedad de copas de helado, waffles, malteadas, copas infantiles y cafés; todos nuestros 
+                productos son realizados con material de calidad y con mucho amor, para que todos puedan 
+                visitarnos en una fecha especial, como la celebración de cumpleaños,día de la madre, día 
+                de la mujer, día del amory la amistad o puede ser el mejor lugar para darse un premio y calmar
+                un antojo.
+            </p>
+            <p class="parrafo">Igualamente brindamos atención a eventos y servicio de refrigerios</p>
+            <h3> Visión</h3>
+            <p class="parrafo">En el 2021 estaremos ubicados en varios Municipios de Antioquia, donde seremos elsitio ideal  y escogido
+               por los clientes para disfrutar de ricas copas de helado, waffles,malteadas, ensaladas de fruta, salpicones y cafés;
+               con la mejor atención al público, donde se sentirá cómodo y consentido al ingresar a nuestro negocio en compañía de amigos
+               y familiares    
+            </p>
+        </div>
+    </main>
+
+ {% endblock %}

@@ -1,0 +1,50 @@
+{% extends "header.html" %}
+{% load static  %}
+{% block content %}
+<link href="https://uniwebsidad.com/static/libros/ejemplos/bootstrap-3/css/bootstrap.min.css" rel="stylesheet">
+<link href=".https://uniwebsidad.com/static/libros/ejemplos/bootstrap-3/css/main.css">
+<link rel="stylesheet" type="text/css" href="{% static 'Helados.css' %}" media="screen" /> 
+{%if empty or cart.total == 0 %}
+
+    <h1 style='text-align:center'> Aún no tienes nada en el carrito, </h1>
+    <h1 style='text-align:center'>vuelve a domicilio para realizar tu pedido</h1>
+    <center><img src="{% static 'Imagenes/domicilios.jpg' %}"></center>
+    <br>
+{% else %}
+<link rel="stylesheet" type="text/css" href="{% static 'carro.css' %}" media="screen" />  
+
+<br>
+<center>
+<table>
+<thead>
+<th style="text-align: center">Nombre</th>
+<th style="text-align: center">Precio</th>
+<th>Cantidad</th>
+<th></th>
+</thead>
+<tfoot>
+<tr>
+<td></td>
+<td>Total: {{cart.total}}</td>
+<td></td>
+</tr>
+</tfoot>
+
+{% for item in cart.cartitem_set.all %}
+        <tr><td> {{ item.Producto1 }}</td><td class="precio">{{ item.Producto1.precio }}</td><td style="text-align: center">{{ item.quantity }} </td><td><a href='{{ item.Producto1.slug}}/?qty=0'>Eliminar</a></td></tr>
+{% endfor %}
+
+
+{% for item in cart.cartitem2_set.all %}
+        <tr><td> {{ item.Producto2 }}</td><td class="precio">{{ item.Producto2.precio }}</td><td style="text-align: center">{{ item.quantity }} </td><td><a href='{{ item.Producto2.slug}}/?qty=0'>Eliminar</a></td></tr>
+{% endfor %}
+
+{% for item in cart.cartitem3_set.all %}
+        <tr><td> {{ item.Producto3 }}</td><td class="precio">{{ item.Producto3.precio }}</td><td style="text-align: center">{{ item.quantity }} </td><td><a href='{{ item.Producto3.slug}}/?qty=0'>Eliminar</a></td></tr>
+{% endfor %}
+
+</table>
+</center>
+<br><br>
+{% endif %}
+{% endblock %}

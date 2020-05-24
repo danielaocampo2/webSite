@@ -1,0 +1,10 @@
+table, th, td {
+    border: #FC4AE3 2px solid;
+  }
+  .precio{
+    text-align: right;
+  }
+  .centrar{
+    text-align: right;
+
+  }
