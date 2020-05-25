@@ -1,5 +1,5 @@
 # webSite
-Explicación para windows
+Explicación para windows.
 Para poder ejecutar el proyecto se debe instalar un IDE de su preferencia, ya sea sublime text, atom o visual studio code
 También se necesita instalar python, en este link se puede descargar python: https://www.python.org/downloads/
 Iniciando el IDE y abriendo el proyecto procedemos a instalar un entorno virtual
