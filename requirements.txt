@@ -41,7 +41,7 @@ isort==4.3.21
 lazy-object-proxy==1.4.3
 mccabe==0.6.1
 nose==1.3.7
-Pillow==7.1.2
+Pillow==9.3.0
 polls @ git+http://git@github.com/divio/django-polls.git@8caed34261c1e6bbf0eeb8aeb2cb7e7b980299bb
 psycopg2==2.8.5
 pycodestyle==2.5.0
